@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.flightmanagementproject.controllers.user.UserFlightsController">
+    <children>
+        <Pane layoutX="14.0" layoutY="75.0" prefHeight="600.0" prefWidth="259.0" style="-fx-background-color: #373737;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Label fx:id="name" layoutX="117.0" layoutY="126.0" prefHeight="20.0" prefWidth="25.0" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                    </font>
+                </Label>
+                <ImageView fx:id="profilePic" fitHeight="88.0" fitWidth="126.0" layoutX="68.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+                <JFXButton layoutX="21.0" layoutY="175.0" prefHeight="42.0" prefWidth="219.0" ripplerFill="WHITE" style="-fx-background-color: #262626;" text="DASHBOARD" textFill="WHITE" onAction="#navigateToDashboard"/>
+                <JFXButton fx:id="navFlights" layoutX="21.0" layoutY="233.0" prefHeight="42.0" prefWidth="219.0" ripplerFill="WHITE" style="-fx-background-color: #666666;" text="BOOK FLIGHTS" textFill="WHITE" />
+                <JFXButton fx:id="navCustomers" layoutX="21.0" layoutY="300.0" prefHeight="42.0" prefWidth="219.0" ripplerFill="WHITE" style="-fx-background-color: #262626;" text="MY BOOKINGS" textFill="WHITE" onAction="#navigateToBookings"/>
+                <JFXButton fx:id="navTickets" layoutX="21.0" layoutY="365.0" prefHeight="42.0" prefWidth="219.0" ripplerFill="WHITE" style="-fx-background-color: #262626;" text="PROFILE" textFill="WHITE" onAction="#navigateToEditProfile"/>
+                <Circle fx:id="profileCircle" fill="#1f93ff" layoutX="131.0" layoutY="72.0" radius="47.0" stroke="BLACK" strokeType="INSIDE" />
+                <JFXButton  layoutX="22.0" layoutY="544.0" onAction="#navigateToSupport" prefHeight="42.0" prefWidth="219.0" ripplerFill="WHITE" style="-fx-background-color: #262626;" text="Help / Support" textFill="WHITE" />
+
+            </children>
+        </Pane>
+        <Pane prefHeight="100.0" prefWidth="743.0" style="-fx-background-color: #262626;" AnchorPane.rightAnchor="0.0">
+            <children>
+                <JFXButton fx:id="btnLogout" layoutX="639.0" layoutY="21.0" onAction="#logout" prefHeight="34.0" prefWidth="93.0" style="-fx-background-color: WHITE; -fx-border-radius: 100;" text="LOGOUT" />
+                <Label layoutX="358.0" layoutY="38.0" text="DASHBOARD" />
+            <Label layoutX="14.0" layoutY="25.0" text="BOOK FLIGHTS" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            </children>
+        </Pane>
+      <Label layoutX="549.0" layoutY="129.0" text="Available Flights">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <TableView fx:id="flightsTable" layoutX="264.0" layoutY="200.0" prefHeight="382.0" prefWidth="730.0">
+        <columns>
+            <TableColumn fx:id="numberColumn" prefWidth="89.60003662109375" text="Number" />
+            <TableColumn fx:id="fromColumn" prefWidth="107.199951171875" text="From" />
+            <TableColumn fx:id="toColumn" prefWidth="91.20001220703125" text="To" />
+            <TableColumn fx:id="departureColumn" prefWidth="114.4000244140625" text="Departure Date" />
+            <TableColumn fx:id="timeColumn" prefWidth="126.4000244140625" text="Departure Time" />
+            <TableColumn fx:id="priceColumn" minWidth="7.99993896484375" prefWidth="114.39996337890625" text="Base Price ($)" />
+            <TableColumn fx:id="seatsColumn" minWidth="0.0" prefWidth="92.0" text="Seats Left" />
+        </columns>
+      </TableView>
+    </children>
+</AnchorPane>

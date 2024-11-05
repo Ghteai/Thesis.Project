@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="418.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.flightmanagementproject.controllers.admin.AddFlightController">
+   <children>
+      <TextField fx:id="flightNumberField" layoutX="115.0" layoutY="76.0" prefHeight="26.0" prefWidth="174.0" promptText="Flight Number" style="-fx-background-color: white; -fx-border-color: #262626;" />
+      <TextField fx:id="departureField" layoutX="115.0" layoutY="117.0" prefHeight="26.0" prefWidth="174.0" promptText="Departure City/Country" style="-fx-background-color: white; -fx-border-color: #262626;" />
+      <TextField fx:id="arrivalField" layoutX="115.0" layoutY="156.0" prefHeight="26.0" prefWidth="174.0" promptText="Arrival City/Country" style="-fx-background-color: white; -fx-border-color: #262626;" />
+      <DatePicker fx:id="departureDateField" layoutX="60.0" layoutY="204.0" prefHeight="27.0" prefWidth="132.0" promptText="Departure Date" style="-fx-background-color: white; -fx-border-color: #262626;" />
+      <JFXButton fx:id="addButton" alignment="TOP_LEFT" layoutX="171.0" layoutY="365.0" onAction="#addFlight" prefHeight="27.0" prefWidth="61.0" style="-fx-border-color: #262626;" text="ADD" />
+      <Pane layoutX="29.0" layoutY="14.0" prefHeight="34.0" prefWidth="346.0" style="-fx-background-color: #262626;">
+         <children>
+            <Label layoutX="36.0" layoutY="7.0" text="ADD A NEW FLIGHT" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView fill="WHITE" glyphName="PLANE" layoutX="14.0" layoutY="24.0" selectionStart="0" size="20" />
+         </children>
+      </Pane>
+      <TextField fx:id="priceField" layoutX="114.0" layoutY="257.0" prefHeight="26.0" prefWidth="174.0" promptText="Price" style="-fx-background-color: white; -fx-border-color: #262626;" />
+      <TextField fx:id="seatsField" layoutX="113.0" layoutY="303.0" prefHeight="26.0" prefWidth="174.0" promptText="Number Of Seats" style="-fx-background-color: white; -fx-border-color: #262626;" />
+      <FontAwesomeIconView glyphName="PLUS" layoutX="217.0" layoutY="382.0" />
+      <TextField fx:id="departureTimeField" layoutX="222.0" layoutY="204.0" prefHeight="27.0" prefWidth="132.0" promptText="Departure Time" style="-fx-background-color: white; -fx-border-color: #262626;" />
+   </children>
+</AnchorPane>

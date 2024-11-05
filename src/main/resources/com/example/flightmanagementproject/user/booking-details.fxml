@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.flightmanagementproject.controllers.user.BookingPrintController">
+    <children>
+        <JFXButton layoutX="292.0" layoutY="358.0" style="-fx-border-color: #262626;" text="PRINT" onAction="#print"/>
+        <JFXButton layoutX="510.0" layoutY="358.0" style="-fx-background-color: RED; -fx-border-color: #262626;" onAction="#cancelBooking" text="Cancel Booking" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </JFXButton>
+        <Label fx:id="departureTimeLabel" layoutX="19.0" layoutY="158.0" text="Departure time : ">
+            <font>
+                <Font name="System Bold Italic" size="12.0" />
+            </font>
+        </Label>
+        <Label fx:id="fromLabel" layoutX="230.0" layoutY="158.0" text="From : ">
+            <font>
+                <Font name="System Bold Italic" size="12.0" />
+            </font>
+        </Label>
+        <Label fx:id="toLabel" layoutX="372.0" layoutY="158.0" text="To :">
+            <font>
+                <Font name="System Bold Italic" size="12.0" />
+            </font>
+        </Label>
+        <FontAwesomeIconView glyphName="ARROW_RIGHT" layoutX="329.0" layoutY="171.0" />
+        <Label fx:id="fullNameLabel" layoutX="11.0" layoutY="70.0" text="Full Name : ">
+            <font>
+                <Font name="System Bold Italic" size="12.0" />
+            </font>
+        </Label>
+        <Label fx:id="bookingRefNumberLabel" layoutX="10.0" layoutY="94.0" text="Booking Reference Number : ">
+            <font>
+                <Font name="System Bold Italic" size="12.0" />
+            </font>
+        </Label>
+        <Pane layoutY="140.0" prefHeight="4.0" prefWidth="630.0" style="-fx-background-color: #262626;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+        <Label layoutX="10.0" layoutY="242.0" text="Passenger Details">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Label fx:id="nationalityLabel" layoutX="10.0" layoutY="324.0" text="Nationality : ">
+            <font>
+                <Font name="System Bold Italic" size="12.0" />
+            </font>
+        </Label>
+        <Label fx:id="fullNameLabel1" layoutX="10.0" layoutY="270.0" text="Full Name:">
+            <font>
+                <Font name="System Bold Italic" size="12.0" />
+            </font>
+        </Label>
+        <Label fx:id="passportNumberLabel" layoutX="10.0" layoutY="295.0" text="Passport Number : ">
+            <font>
+                <Font name="System Bold Italic" size="12.0" />
+            </font>
+        </Label>
+        <Label fx:id="electronicTicketLabel" layoutX="214.0" layoutY="14.0" text="Electronic Ticket">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <Label fx:id="itinReceiptLabel" layoutX="193.0" layoutY="30.0" text="Passenger Itinerary Receipt">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Pane layoutY="58.0" prefHeight="4.0" prefWidth="630.0" style="-fx-background-color: #262626;" />
+        <Label fx:id="bookingDateLabel" layoutX="355.0" layoutY="94.0" text="Date of Booking : ">
+            <font>
+                <Font name="System Bold Italic" size="12.0" />
+            </font>
+        </Label>
+        <Label fx:id="flightNumberLabel" layoutX="10.0" layoutY="116.0" text="Flight Number : ">
+            <font>
+                <Font name="System Bold Italic" size="12.0" />
+            </font>
+        </Label>
+        <Label fx:id="classLabel" layoutX="19.0" layoutY="191.0" text="Class : ">
+            <font>
+                <Font name="System Bold Italic" size="12.0" />
+            </font>
+        </Label>
+        <Label fx:id="extraLegRoomLabel" layoutX="388.0" layoutY="191.0" text="Extra Leg Room :">
+            <font>
+                <Font name="System Bold Italic" size="12.0" />
+            </font>
+        </Label>
+        <Label fx:id="bookingPriceLabel" layoutX="193.0" layoutY="191.0" text="Booking Price : ">
+            <font>
+                <Font name="System Bold Italic" size="12.0" />
+            </font>
+        </Label>
+        <Pane layoutY="228.0" prefHeight="4.0" prefWidth="630.0" style="-fx-background-color: #262626;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+    </children>
+</AnchorPane>

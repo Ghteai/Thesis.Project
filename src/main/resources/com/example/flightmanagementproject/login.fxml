@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.flightmanagementproject.auth.LoginController">
+   <children>
+      <AnchorPane layoutX="500.0" prefHeight="600.0" prefWidth="500.0" style="-fx-background-color: white;">
+         <children>
+            <TextField fx:id="txtUsername" alignment="CENTER" layoutX="110.0" layoutY="233.0" prefHeight="26.0" prefWidth="280.0" promptText="Username" style="-fx-border-color: #262626;" />
+            <PasswordField fx:id="txtPassword" alignment="CENTER" layoutX="110.0" layoutY="286.0" prefHeight="26.0" prefWidth="280.0" promptText="Password" style="-fx-border-color: #262626;" />
+            <Label layoutX="128.0" layoutY="132.0" prefHeight="38.0" prefWidth="244.0" text="Access Your Account" wrapText="true">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+            <Label layoutX="143.0" layoutY="73.0" prefHeight="59.0" prefWidth="213.0" text="WELCOME" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="41.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btnLogin" layoutX="178.0" layoutY="345.0" onAction="#login" prefHeight="38.0" prefWidth="144.0" style="-fx-background-color: #262626;" text="SIGN IN" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="39.0" layoutY="485.0" text="Don't have an account ?" />
+            <JFXButton fx:id="btnSignUp" layoutX="186.0" layoutY="481.0" onAction="#goToRegister" style="-fx-border-color: #262626;" text="SIGN UP" />
+            <JFXButton fx:id="btnClose" layoutX="464.0" layoutY="14.0" onAction="#close" ripplerFill="WHITE" style="-fx-background-color: red;" text="X" textFill="WHITE">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </JFXButton>
+            <FontAwesomeIconView glyphName="USER" layoutX="82.0" layoutY="251.0" />
+            <FontAwesomeIconView glyphName="LOCK" layoutX="82.0" layoutY="303.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="600.0" prefWidth="500.0" style="-fx-background-color: #262626;">
+         <children>
+            <ImageView fx:id="logo" fitHeight="207.0" fitWidth="244.0" layoutX="128.0" layoutY="197.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

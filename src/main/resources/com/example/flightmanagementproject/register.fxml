@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.flightmanagementproject.auth.RegisterController">
+    <children>
+        <AnchorPane layoutX="500.0" prefHeight="600.0" prefWidth="500.0" style="-fx-background-color: white;">
+            <children>
+                <Label layoutX="179.0" layoutY="38.0" prefHeight="27.0" prefWidth="175.0" text="Create Your Account" wrapText="true">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <Label layoutX="190.0" layoutY="3.0" prefHeight="40.0" prefWidth="153.0" text="WELCOME" textAlignment="CENTER" wrapText="true">
+                    <font>
+                        <Font name="System Bold" size="30.0" />
+                    </font>
+                </Label>
+                <JFXButton fx:id="btnRegister" layoutX="190.0" layoutY="487.0" onAction="#register" prefHeight="38.0" prefWidth="144.0" style="-fx-background-color: #262626;" text="SIGN UP" textFill="WHITE">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </JFXButton>
+                <Label layoutX="17.0" layoutY="569.0" text="Already Have An Account?" />
+                <JFXButton layoutX="164.0" layoutY="565.0" onAction="#goToSignIn" style="-fx-border-color: #262626;" text="SIGN IN" />
+                <JFXButton fx:id="btnClose" layoutX="464.0" layoutY="14.0" onAction="#close" ripplerFill="WHITE" style="-fx-background-color: red;" text="X" textFill="WHITE">
+                    <font>
+                        <Font size="11.0" />
+                    </font>
+                </JFXButton>
+                <TextField fx:id="nameField" alignment="CENTER" layoutX="33.0" layoutY="181.0" prefHeight="27.0" prefWidth="175.0" promptText="Full Name" style="-fx-border-color: #262626;" />
+                <TextField fx:id="nationalityField" alignment="CENTER" layoutX="279.0" layoutY="181.0" prefHeight="27.0" prefWidth="175.0" promptText="Nationality" style="-fx-border-color: #262626;" />
+                <TextField fx:id="passeportField" alignment="CENTER" layoutX="279.0" layoutY="238.0" prefHeight="27.0" prefWidth="175.0" promptText="Passport Number" style="-fx-border-color: #262626;" />
+
+                <TextField fx:id="usernameField" alignment="CENTER" layoutX="25.0" layoutY="422.0" prefHeight="26.0" prefWidth="175.0" promptText="Username" style="-fx-border-color: #262626;" />
+            <PasswordField fx:id="passwordField" alignment="CENTER" layoutX="279.0" layoutY="422.0" prefHeight="26.0" prefWidth="175.0" promptText="Password" style="-fx-border-color: #262626; -fx-background-color: white;" />
+            <JFXButton fx:id="upload" layoutX="288.0" layoutY="106.0" onAction="#handleUploadPicture" text="Upload An Image (600x600 px)" />
+            <ImageView fx:id="profilePic" fitHeight="95.0" fitWidth="109.0" layoutX="179.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true" />
+            <JFXRadioButton fx:id="maleRadio" layoutX="96.0" layoutY="350.0" text="Male">
+               <selectedColor>
+                  <Color red="0.14901961386203766" green="0.14901961386203766" blue="0.14901961386203766" />
+               </selectedColor>
+               <toggleGroup>
+                  <ToggleGroup fx:id="genderToggleGroup" />
+               </toggleGroup>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="femailRadio" layoutX="161.0" layoutY="350.0" text="Female" toggleGroup="$genderToggleGroup">
+               <selectedColor>
+                  <Color red="0.14901961386203766" green="0.14901961386203766" blue="0.14901961386203766" />
+               </selectedColor>
+            </JFXRadioButton>
+            <DatePicker fx:id="dobField" layoutX="34.0" layoutY="239.0" promptText="Date of Birth" style="-fx-border-color: #262626; -fx-background-color: white;" />
+            <TextField fx:id="emailField" alignment="CENTER" layoutX="34.0" layoutY="290.0" prefHeight="27.0" prefWidth="175.0" promptText="Email" style="-fx-border-color: #262626;" />
+            <TextField fx:id="phoneField" alignment="CENTER" layoutX="281.0" layoutY="290.0" prefHeight="27.0" prefWidth="175.0" promptText="Phone Number" style="-fx-border-color: #262626;" />
+            <Label layoutX="34.0" layoutY="350.0" text="Gender : ">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="passportExpField" layoutX="281.0" layoutY="344.0" prefHeight="26.0" prefWidth="175.0" promptText="Password Expiry Date" style="-fx-border-color: #262626;" />
+            <Pane layoutX="128.0" layoutY="396.0" prefHeight="1.0" prefWidth="244.0" style="-fx-background-color: #262626;" />
+            </children>
+        </AnchorPane>
+        <AnchorPane prefHeight="600.0" prefWidth="500.0" style="-fx-background-color: #262626;">
+            <children>
+                <ImageView fx:id="logo" fitHeight="207.0" fitWidth="244.0" layoutX="128.0" layoutY="197.0" pickOnBounds="true" preserveRatio="true" />
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
